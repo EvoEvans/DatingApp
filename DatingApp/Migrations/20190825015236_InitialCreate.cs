@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DatingApp.Migrations
 {
-    public partial class InitialMigation : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Values",
+                name: "Value",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -17,14 +17,14 @@ namespace DatingApp.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Values", x => x.Id);
+                    table.PrimaryKey("PK_Value", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Values");
+                name: "Value");
         }
     }
 }
